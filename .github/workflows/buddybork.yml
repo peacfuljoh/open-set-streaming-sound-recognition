@@ -1,0 +1,32 @@
+name: buddybork-CI
+run-name: ${{ github.actor }} is validating the buddybork repo
+on:
+  push:
+    paths:
+      - buddybork/**
+jobs:
+  run-tests:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - run: cd /home/runner/work/web-apps/web-apps
+      - name: setup env vars
+        run: make build-gha
+      - name: setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '19.7.0'
+      - name: install Node dependencies
+        run: npm install
+      - name: setup conda env and activate
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: buddybork
+          environment-file: buddybork/environment.yml
+          auto-activate-base: false
+      - name: run tests
+        run: make test-gha
+        env:
+          BB_PATHS: ${{ env.BB_PATHS }}
+          PYTHONPATH: ${{ env.PYTHONPATH }}
