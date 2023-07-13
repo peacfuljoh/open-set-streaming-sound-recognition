@@ -1,0 +1,25 @@
+html(lang="en")
+    head
+        include head.pug
+        title Buddybork Login
+    body
+        header(id="header-login")
+            h2 Real-Time Open-Set Sound Event Recognition
+            h4 Created by: Johannes Traa, 2023
+        br
+        br
+        div(class="login-container")
+            h3(class="login-header2") Login
+            form(action="/dashboard", method="POST", autocomplete="off")
+                div(class="login-entry")
+                    label(for="username", class="form-label") Username
+                    input(type="text", class="form-control", id="username", name="username")
+                div(class="login-entry")
+                    label(for="password", class="form-label") Password
+                    input(type="password", class="form-control", id="password", name="password")
+                button(type="submit", class="login-button") Submit
+        br
+        br
+        div(id="login-content") !{helpContent}
+        br
+        br

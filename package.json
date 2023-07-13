@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "connect-pg-simple": "^8.0.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "moment": "^2.29.4",
+    "node-wav": "^0.0.2",
+    "pg": "^8.10.0",
+    "pug": "^3.0.2"
+  }
+}

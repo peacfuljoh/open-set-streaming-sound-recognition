@@ -1,0 +1,35 @@
+html(lang="en")
+    head
+        include head.pug
+        title Buddybork Dashboard
+    body
+        header
+            h1 Dashboard
+        include menu2.pug
+        br
+        br
+        div(style="display: grid; grid-template-columns: 500px 500px;")
+            div()
+                label(for="modelSelectDropdown", id="modelSelectLabel", style="display:inline;") Model select
+                select(id="modelSelectDropdown", style="width:140px; display:inline;")
+            div()
+                label(for="dataCollectSwitch") Data collect toggle
+                br
+                label(class="switch", id="dataCollectSwitch")
+                    input(type="checkbox", id="dataCollectCheckbox")
+                    span(class="slider round")
+        br
+        div(id="progressBarContainer")
+            div(id="progressBarBackground")
+                div(id="progressBar")
+        br
+        div(id="detectionsDiv", style="width:1200px; height:350px; mix-blend-mode:multiply")
+        br
+        div(id="audioMacrosegDiv", style="width:1000px; height:350px; mix-blend-mode:multiply")
+        div(id="audioPlayback")
+        br
+        br
+        br
+
+    include foot_scripts.pug
+    script(src="/static/index.js")

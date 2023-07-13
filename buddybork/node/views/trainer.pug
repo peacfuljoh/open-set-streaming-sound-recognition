@@ -1,0 +1,37 @@
+html(lang="en")
+    head
+        include head.pug
+        title Buddybork Model Builder
+    body
+        header
+            h1 Model Builder
+        include menu2.pug
+        br
+        br
+        div(style="display: grid; grid-template-columns: 85% 15%;")
+            div(id="daysAnnotsDiv", style="height:350px; mix-blend-mode:multiply")
+            div(id="tagsSelectDiv", style="mix-blend-mode:multiply;")
+        br
+        br
+        div(style="display: grid; grid-template-columns: 160px 160px 160px 160px 160px;")
+            div()
+                label(for="groupModeDropdown", id="groupModeLabel", style="display:inline;") Grouping mode
+                select(id="groupModeDropdown", style="width:140px; display:inline;")
+            div()
+                label(for="modelSelectDropdown", id="modelSelectLabel", style="display:inline;") Select model
+                select(id="modelSelectDropdown", style="width:140px; display:inline;")
+            div()
+                button(type="submit", id="fitModelButton", style="width:140px; height:40px; display:inline;") Fit model
+            div()
+                button(type="submit", id="predModelButton", style="width:140px; height:40px; display:inline;") Predict with model
+            div()
+                button(type="submit", id="deleteModelButton", style="width:140px; height:40px; display:inline;") Delete model (double-click)
+        br
+        div(id="progressBarContainer")
+            div(id="progressBarBackground")
+                div(id="progressBar")
+        br
+        div(id="perfDiv", style="width:400px; height:500px; mix-blend-mode:multiply")
+
+    include foot_scripts.pug
+    script(src="/static/trainer.js")

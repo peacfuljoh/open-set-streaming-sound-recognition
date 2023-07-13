@@ -1,0 +1,11 @@
+{
+  "$COMMENT": "All global paths are set here",
+  "DATA_DIR": "/home/nuc/buddybork_data/",
+  "FEAT_DIR": "/home/nuc/buddybork_features/",
+  "MODEL_DIR": "/home/nuc/buddybork_model/",
+  "ASSETS_DIR": "assets/",
+  "PYTHON_ENV_PATH": "/home/nuc/miniconda3/envs/buddybork/bin/python",
+  "CAPTURE_STATE_JSON_PATH": "/home/nuc/buddybork_state/data_capture_state.json",
+  "DB_CONFIG_PATH": "/home/nuc/buddybork_config/db_config.json",
+  "NET_CONFIG_PATH": "/home/nuc/buddybork_config/net_config.json"
+}

@@ -1,0 +1,51 @@
+html(lang="en")
+    head
+        include head.pug
+        title Buddybork Annotator
+    body
+        header
+            h1 Annotator
+        include menu2.pug
+        br
+        br
+        div(id="daysTimelineDiv", style="height:350px; mix-blend-mode:multiply")
+        br
+        br
+        div(id="annotTimelineDiv", style="height:350px; mix-blend-mode:multiply")
+        br
+        br
+        div(id="timelineDiv", style="height:350px; mix-blend-mode:multiply")
+        br
+        br
+        div(style="display: grid; grid-template-columns: 82% 18%;")
+            div()
+                div(id="audioMacrosegDiv", style="height:350px; mix-blend-mode:multiply")
+                div(id="audioPlayback")
+            div()
+                label(for="tagDropdown", id="tagDropdownLabel", style="display: none;") Annotation label:
+                br
+                select(id="tagDropdown", style="width:50%; display: none")
+                br
+                br
+                label(for="annotModeDropdown", id="annotModeDropdownLabel", style="display: none;") Annotation mode:
+                br
+                select(id="annotModeDropdown", style="width:50%; display: none")
+                br
+                br
+                label(for="macrosegLeftNavLabel", id="macrosegNavLabel", style="display: none;") Navigation:
+                br
+                button(id="macrosegLeftNavFast", class="annot-nav-button")
+                    i(class="fa-solid fa-angles-left", style="font-size:1.2em")
+                button(id="macrosegLeftNav", class="annot-nav-button")
+                    i(class="fa-solid fa-angle-left", style="font-size:1.2em")
+                button(id="macrosegRightNav", class="annot-nav-button")
+                    i(class="fa-solid fa-angle-right", style="font-size:1.2em")
+                button(id="macrosegRightNavFast", class="annot-nav-button")
+                    i(class="fa-solid fa-angles-right", style="font-size:1.2em")
+        br
+        br
+        br
+        // extra line breaks to avoid hiding macroseg audio on a phone
+
+    include foot_scripts.pug
+    script(src="/static/annotator.js")
