@@ -3,7 +3,7 @@ CONDA_ACTIVATE = source $$(conda info --base)/etc/profile.d/conda.sh ; conda act
 
 REPO_ROOT_ = /home/nuc/web-apps
 BB_ROOT_ = $(REPO_ROOT_)/buddybork
-REPO_ROOT_GHA_ = /home/runner/work/web-apps/web-apps
+REPO_ROOT_GHA_ = /home/runner/work/ossr_2023_07_13/ossr_2023_07_13
 BB_ROOT_GHA_ = $(REPO_ROOT_GHA_)/buddybork
 
 
