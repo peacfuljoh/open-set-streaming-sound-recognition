@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v3
-      - run: cd /home/runner/work/web-apps/web-apps
+      - run: cd /home/runner/work/ossr_2023_07_13/ossr_2023_07_13
       - name: setup env vars
         run: make build-gha
       - name: setup Node
