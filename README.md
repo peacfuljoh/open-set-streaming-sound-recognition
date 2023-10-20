@@ -3,9 +3,7 @@
 
 ## Overview
 
-This project (codename Buddybork) is my effort to learn more about full-stack development (running a secure web server, 
-serving an interactive web app to a client browser), database management, and algorithm integration 
-(batch train/test, real-time detection).
+This project (codename Buddybork) comprises a full-stack system serving an interactive web app from a secure web server. It performs real-time open-set sound event recognition via continuous capture, offline labeling and model train/test, and real-time detection from a client dashboard.
 
 This repository contains code for the five components of this OSR system:
  
@@ -20,7 +18,6 @@ Some configuration and setup is required outside of this code:
 - Setting up the SQL database and necessary tables (see below).
 - Configuring repo and data roots, user info, database info, etc.
 
-Further setup is required to upgrade the web server to production (see below).
 
 
 ## Data capture
